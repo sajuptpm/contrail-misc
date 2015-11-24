@@ -1,0 +1,44 @@
+{
+    "service-instance": {
+        "display_name": "blue-a",
+        "fq_name": [
+            "default-domain",
+            "admin",
+            "blue-a"
+        ],
+        "name": "blue-a",
+        "parent_fq_name": [
+            "default-domain",
+            "admin"
+        ],
+        "parent_type": "project",
+        "service_instance_properties": {
+            "interface_list": [
+                {
+                    "virtual_network": ""
+                },
+                {
+                    "virtual_network": ""
+                },
+                {
+                    "virtual_network": "default-domain:admin:blue"
+                }
+            ],
+            "left_virtual_network": "",
+            "management_virtual_network": "",
+            "right_virtual_network": "",
+            "scale_out": {
+                "max_instances": 1
+            }
+        },
+        "service_template_refs": [
+            {
+                "attr": null,
+                "to": [
+                    "default-domain",
+                    "tc-transparent"
+                ]
+            }
+        ]
+    }
+}

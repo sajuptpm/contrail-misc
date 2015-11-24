@@ -1,0 +1,40 @@
+{
+    "service-template": {
+        "display_name": "tc-transparent",
+        "fq_name": [
+            "default-domain",
+            "tc-transparent"
+        ],
+        "name": "tc-transparent",
+        "parent_fq_name": [
+            "default-domain"
+        ],
+        "parent_type": "domain",
+        "service_template_properties": {
+            "availability_zone_enable": false,
+            "flavor": "m1.tiny",
+            "image_name": "tinycore-net-transparent-fw",
+            "interface_type": [
+                {
+                    "service_interface_type": "management",
+                    "shared_ip": false,
+                    "static_route_enable": false
+                },
+                {
+                    "service_interface_type": "left",
+                    "shared_ip": false,
+                    "static_route_enable": false
+                },
+                {
+                    "service_interface_type": "right",
+                    "shared_ip": false,
+                    "static_route_enable": false
+                }
+            ],
+            "ordered_interfaces": true,
+            "service_mode": "transparent",
+            "service_scaling": false,
+            "service_type": "firewall"
+        }
+    }
+}

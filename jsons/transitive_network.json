@@ -1,0 +1,53 @@
+{
+    "virtual-network": {
+        "display_name": "transitive",
+        "flood_unknown_unicast": false,
+        "fq_name": [
+            "default-domain",
+            "admin",
+            "transitive"
+        ],
+        "is_shared": false,
+        "name": "transitive",
+        "network_ipam_refs": [
+            {
+                "attr": {
+                    "ipam_subnets": [
+                        {
+                            "addr_from_start": true,
+                            "allocation_pools": [],
+                            "default_gateway": "80.0.0.1",
+                            "dhcp_option_list": {
+                                "dhcp_option": []
+                            },
+                            "dns_server_address": "80.0.0.2",
+                            "enable_dhcp": true,
+                            "host_routes": {
+                                "route": []
+                            },
+                            "subnet": {
+                                "ip_prefix": "80.0.0.0",
+                                "ip_prefix_len": 24
+                            }
+                        }
+                    ]
+                },
+                "to": [
+                    "default-domain",
+                    "default-project",
+                    "default-network-ipam"
+                ]
+            }
+        ],
+        "parent_fq_name": [
+            "default-domain",
+            "admin"
+        ],
+        "parent_type": "project",
+        "virtual_network_properties": {
+            "allow_transit": true,
+            "forwarding_mode": "l3",
+            "rpf": "enable"
+        }
+    }
+}

@@ -1,0 +1,419 @@
+{
+    "service-templates": [
+        {
+            "service-template": {
+                "display_name": "haproxy-loadbalancer-template",
+                "fq_name": [
+                    "default-domain",
+                    "haproxy-loadbalancer-template"
+                ],
+                "href": "http://localhost:8082/service-template/e664549b-27c5-4397-b370-5a5a78610f6f",
+                "id_perms": {
+                    "created": "2015-11-24T19:56:13.502520",
+                    "creator": null,
+                    "description": null,
+                    "enable": true,
+                    "last_modified": "2015-11-24T19:56:13.502520",
+                    "permissions": {
+                        "group": "admin",
+                        "group_access": 7,
+                        "other_access": 7,
+                        "owner": "admin",
+                        "owner_access": 7
+                    },
+                    "user_visible": true,
+                    "uuid": {
+                        "uuid_lslong": 12929933874793877359,
+                        "uuid_mslong": 16601487151758394263
+                    }
+                },
+                "name": "haproxy-loadbalancer-template",
+                "parent_href": "http://localhost:8082/domain/e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "parent_type": "domain",
+                "parent_uuid": "e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "service_template_properties": {
+                    "availability_zone_enable": false,
+                    "flavor": null,
+                    "image_name": null,
+                    "instance_data": null,
+                    "interface_type": [
+                        {
+                            "service_interface_type": "right",
+                            "shared_ip": true,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "left",
+                            "shared_ip": true,
+                            "static_route_enable": false
+                        }
+                    ],
+                    "ordered_interfaces": true,
+                    "service_mode": "in-network-nat",
+                    "service_scaling": true,
+                    "service_type": "loadbalancer",
+                    "service_virtualization_type": "network-namespace",
+                    "vrouter_instance_type": null
+                },
+                "uuid": "e664549b-27c5-4397-b370-5a5a78610f6f"
+            }
+        },
+        {
+            "service-template": {
+                "display_name": "docker-template",
+                "fq_name": [
+                    "default-domain",
+                    "docker-template"
+                ],
+                "href": "http://localhost:8082/service-template/237340c1-e87c-4ebb-8459-83a581ffd578",
+                "id_perms": {
+                    "created": "2015-11-24T19:56:13.536120",
+                    "creator": null,
+                    "description": null,
+                    "enable": true,
+                    "last_modified": "2015-11-24T19:56:13.536120",
+                    "permissions": {
+                        "group": "admin",
+                        "group_access": 7,
+                        "other_access": 7,
+                        "owner": "admin",
+                        "owner_access": 7
+                    },
+                    "user_visible": true,
+                    "uuid": {
+                        "uuid_lslong": 9536798432807605624,
+                        "uuid_mslong": 2554456615222529723
+                    }
+                },
+                "name": "docker-template",
+                "parent_href": "http://localhost:8082/domain/e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "parent_type": "domain",
+                "parent_uuid": "e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "service_template_properties": {
+                    "availability_zone_enable": false,
+                    "flavor": null,
+                    "image_name": "ubuntu",
+                    "instance_data": "{\"command\":\"/bin/bash\"}",
+                    "interface_type": [
+                        {
+                            "service_interface_type": "management",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "left",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "right",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        }
+                    ],
+                    "ordered_interfaces": true,
+                    "service_mode": "transparent",
+                    "service_scaling": false,
+                    "service_type": "firewall",
+                    "service_virtualization_type": "vrouter-instance",
+                    "vrouter_instance_type": "docker"
+                },
+                "uuid": "237340c1-e87c-4ebb-8459-83a581ffd578"
+            }
+        },
+        {
+            "service-template": {
+                "display_name": "nat-template",
+                "fq_name": [
+                    "default-domain",
+                    "nat-template"
+                ],
+                "href": "http://localhost:8082/service-template/c5b71a81-db48-486a-92e7-1d2bee49aa0b",
+                "id_perms": {
+                    "created": "2015-11-24T19:56:13.432763",
+                    "creator": null,
+                    "description": null,
+                    "enable": true,
+                    "last_modified": "2015-11-24T19:56:13.432763",
+                    "permissions": {
+                        "group": "admin",
+                        "group_access": 7,
+                        "other_access": 7,
+                        "owner": "admin",
+                        "owner_access": 7
+                    },
+                    "user_visible": true,
+                    "uuid": {
+                        "uuid_lslong": 10585461523676244491,
+                        "uuid_mslong": 14246885091241904234
+                    }
+                },
+                "name": "nat-template",
+                "parent_href": "http://localhost:8082/domain/e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "parent_type": "domain",
+                "parent_uuid": "e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "service_template_properties": {
+                    "availability_zone_enable": false,
+                    "flavor": "m1.medium",
+                    "image_name": "analyzer",
+                    "instance_data": null,
+                    "interface_type": [
+                        {
+                            "service_interface_type": "management",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "left",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "right",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        }
+                    ],
+                    "ordered_interfaces": true,
+                    "service_mode": "in-network-nat",
+                    "service_scaling": false,
+                    "service_type": "firewall",
+                    "service_virtualization_type": "virtual-machine",
+                    "vrouter_instance_type": null
+                },
+                "uuid": "c5b71a81-db48-486a-92e7-1d2bee49aa0b"
+            }
+        },
+        {
+            "service-template": {
+                "display_name": "tc-transparent",
+                "fq_name": [
+                    "default-domain",
+                    "tc-transparent"
+                ],
+                "href": "http://localhost:8082/service-template/cfa01422-cdd0-4da7-9012-725af01dca60",
+                "id_perms": {
+                    "created": "2015-11-24T21:09:24.903108",
+                    "creator": null,
+                    "description": null,
+                    "enable": true,
+                    "last_modified": "2015-11-24T21:09:24.903108",
+                    "permissions": {
+                        "group": "admin",
+                        "group_access": 7,
+                        "other_access": 7,
+                        "owner": "admin",
+                        "owner_access": 7
+                    },
+                    "user_visible": true,
+                    "uuid": {
+                        "uuid_lslong": 10381485825943521888,
+                        "uuid_mslong": 14960980101839211943
+                    }
+                },
+                "name": "tc-transparent",
+                "parent_href": "http://localhost:8082/domain/e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "parent_type": "domain",
+                "parent_uuid": "e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "service_template_properties": {
+                    "availability_zone_enable": false,
+                    "flavor": "m1.tiny",
+                    "image_name": "tinycore-net-transparent-fw",
+                    "interface_type": [
+                        {
+                            "service_interface_type": "management",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "left",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "right",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        }
+                    ],
+                    "ordered_interfaces": true,
+                    "service_mode": "transparent",
+                    "service_scaling": false,
+                    "service_type": "firewall"
+                },
+                "uuid": "cfa01422-cdd0-4da7-9012-725af01dca60"
+            }
+        },
+        {
+            "service-template": {
+                "display_name": "netns-snat-template",
+                "fq_name": [
+                    "default-domain",
+                    "netns-snat-template"
+                ],
+                "href": "http://localhost:8082/service-template/90f730b2-9d2f-46f7-a760-fc7b4fdf44bb",
+                "id_perms": {
+                    "created": "2015-11-24T19:56:13.473210",
+                    "creator": null,
+                    "description": null,
+                    "enable": true,
+                    "last_modified": "2015-11-24T19:56:13.473210",
+                    "permissions": {
+                        "group": "admin",
+                        "group_access": 7,
+                        "other_access": 7,
+                        "owner": "admin",
+                        "owner_access": 7
+                    },
+                    "user_visible": true,
+                    "uuid": {
+                        "uuid_lslong": 12060917408649397435,
+                        "uuid_mslong": 10445871404408588023
+                    }
+                },
+                "name": "netns-snat-template",
+                "parent_href": "http://localhost:8082/domain/e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "parent_type": "domain",
+                "parent_uuid": "e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "service_template_properties": {
+                    "availability_zone_enable": false,
+                    "flavor": null,
+                    "image_name": null,
+                    "instance_data": null,
+                    "interface_type": [
+                        {
+                            "service_interface_type": "right",
+                            "shared_ip": true,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "left",
+                            "shared_ip": true,
+                            "static_route_enable": false
+                        }
+                    ],
+                    "ordered_interfaces": true,
+                    "service_mode": "in-network-nat",
+                    "service_scaling": true,
+                    "service_type": "source-nat",
+                    "service_virtualization_type": "network-namespace",
+                    "vrouter_instance_type": null
+                },
+                "uuid": "90f730b2-9d2f-46f7-a760-fc7b4fdf44bb"
+            }
+        },
+        {
+            "service-template": {
+                "display_name": "tc-in-network",
+                "fq_name": [
+                    "default-domain",
+                    "tc-in-network"
+                ],
+                "href": "http://localhost:8082/service-template/043cb911-52c4-4c8a-b5ed-60ee77e0acc0",
+                "id_perms": {
+                    "created": "2015-11-24T21:09:55.512021",
+                    "creator": null,
+                    "description": null,
+                    "enable": true,
+                    "last_modified": "2015-11-24T21:09:55.512021",
+                    "permissions": {
+                        "group": "admin",
+                        "group_access": 7,
+                        "other_access": 7,
+                        "owner": "admin",
+                        "owner_access": 7
+                    },
+                    "user_visible": true,
+                    "uuid": {
+                        "uuid_lslong": 13109240667675077824,
+                        "uuid_mslong": 305322358808530058
+                    }
+                },
+                "name": "tc-in-network",
+                "parent_href": "http://localhost:8082/domain/e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "parent_type": "domain",
+                "parent_uuid": "e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "service_template_properties": {
+                    "availability_zone_enable": false,
+                    "flavor": "m1.tiny",
+                    "image_name": "tinycore-in-network",
+                    "interface_type": [
+                        {
+                            "service_interface_type": "management",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "left",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        },
+                        {
+                            "service_interface_type": "right",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        }
+                    ],
+                    "ordered_interfaces": true,
+                    "service_mode": "in-network",
+                    "service_scaling": false,
+                    "service_type": "firewall"
+                },
+                "uuid": "043cb911-52c4-4c8a-b5ed-60ee77e0acc0"
+            }
+        },
+        {
+            "service-template": {
+                "display_name": "analyzer-template",
+                "fq_name": [
+                    "default-domain",
+                    "analyzer-template"
+                ],
+                "href": "http://localhost:8082/service-template/79367d35-aeca-40b1-8d9b-d5e62caaa483",
+                "id_perms": {
+                    "created": "2015-11-24T19:56:13.404917",
+                    "creator": null,
+                    "description": null,
+                    "enable": true,
+                    "last_modified": "2015-11-24T19:56:13.404917",
+                    "permissions": {
+                        "group": "admin",
+                        "group_access": 7,
+                        "other_access": 7,
+                        "owner": "admin",
+                        "owner_access": 7
+                    },
+                    "user_visible": true,
+                    "uuid": {
+                        "uuid_lslong": 10203984565306565763,
+                        "uuid_mslong": 8734306196850884785
+                    }
+                },
+                "name": "analyzer-template",
+                "parent_href": "http://localhost:8082/domain/e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "parent_type": "domain",
+                "parent_uuid": "e7be2494-cd51-48bc-a1d4-b4745e298180",
+                "service_template_properties": {
+                    "availability_zone_enable": false,
+                    "flavor": "m1.medium",
+                    "image_name": "analyzer",
+                    "instance_data": null,
+                    "interface_type": [
+                        {
+                            "service_interface_type": "left",
+                            "shared_ip": false,
+                            "static_route_enable": false
+                        }
+                    ],
+                    "ordered_interfaces": true,
+                    "service_mode": null,
+                    "service_scaling": false,
+                    "service_type": "analyzer",
+                    "service_virtualization_type": "virtual-machine",
+                    "vrouter_instance_type": null
+                },
+                "uuid": "79367d35-aeca-40b1-8d9b-d5e62caaa483"
+            }
+        }
+    ]
+}
